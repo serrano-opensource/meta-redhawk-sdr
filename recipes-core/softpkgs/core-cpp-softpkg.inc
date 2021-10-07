@@ -8,3 +8,6 @@ SOFTPKG_PREFIX .= "/rh/${SOFTPKG_NAME}"
 
 SRC_URI = "git://github.com/redhawksdr/${SOFTPKG_NAME};protocol=https;tag=${PV}-${PR}"
 S = "${WORKDIR}/git/cpp"
+
+export GIT_SSL_NO_VERIFY = "1"
+

@@ -12,3 +12,7 @@ S = "${WORKDIR}/git/cpp"
 
 FILES_${PN} += "${SDRROOT}/*"
 FILES_${PN}-dbg += "${SDRROOT}/dom/components/rh/${COMPONENT_NAME}/*/.debug"
+
+export GIT_SSL_NO_VERIFY = "1"
+
+
