@@ -46,7 +46,7 @@ redhawk_sdrroot_installer() {
     rm -f ${SDRROOT_TAR}
 
     cd ${IMAGE_ROOTFS}/${SDRROOT}
-    PROJECTS="$(find dom/{mgr/rh/ComponentHost,components,deps} -iname *.spd.xml | while read spd; do echo $(dirname $spd); done;)"
+    PROJECTS="$(find dev/devices dom/{mgr/rh/ComponentHost,components,deps} -iname *.spd.xml | while read spd; do echo $(dirname $spd); done;)"
     PROJECTS="${PROJECTS//$'\n'/ }"
     tar -czf ${SDRROOT_TAR} ${PROJECTS} -C ${MRSS} spd_utility install_assets
 }
